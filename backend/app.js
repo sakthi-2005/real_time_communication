@@ -96,20 +96,20 @@ app.get('/logout',(req, res) => {
             console.log(req);
             res.redirect('/');
         });
-});
+  });
 
 
 app.get('/chats',authenticated,(req,res)=>{
 
-    const httpServer = createServer(app);
-    const io = new Server(httpServer, {});
-    
-    io.on("connection", (socket) => {
-        console.log("user connected");
-    });
-    
-    httpServer.listen(8000);
-    res.send("hi");
+const httpServer = createServer(app);
+const io = new Server(httpServer, {});
+
+io.on("connection", (socket) => {
+    console.log("user connected");
+});
+
+httpServer.listen(8000);
+res.send("hi");
 });
 
 
