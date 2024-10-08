@@ -25,7 +25,7 @@ passport.deserializeUser((id,done)=>done(null,id));
 passport.use(new githubstatergy({
     clientID : process.env.GITHUB_CLIENT_ID,
     clientSecret : process.env.GITHUB_CLIENT_SECRET,
-    callbackURL : 'http://localhost:8000/auth/github/callback'
+    callbackURL : 'https://convo-space-f4ed.onrender.com/auth/github/callback'
 },
 (refreshtoken,acesstoken,profile,done)=>{
     console.log(profile);
