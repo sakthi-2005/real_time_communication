@@ -4,6 +4,8 @@ const passport = require('passport');
 const githubstatergy = require('passport-github2').Strategy;
 const session = require('express-session');
 require('dotenv').config();
+const { Server } = require("socket.io");
+const { createServer } = require("http");
 
 app.use(session({
     secret: process.env.SESSION_SECRET ,
@@ -31,14 +33,26 @@ passport.use(new githubstatergy({
     return done(null,profile);
 }));
 
-let authenticated = (req,res,next)=>{
+let notauthenticated = (req,res,next)=>{
     
     if(!req.isAuthenticated()){
+        console.log("auth");
         next();
     }else{
-        res.redirect('/auth/github/callback');
+        res.redirect('/chats');
     }
 }
+
+let authenticated = (req,res,next)=>{
+    
+    if(req.isAuthenticated()){
+        console.log("auth");
+        next();
+    }else{
+        res.redirect('/');
+    }
+}
+
 app.get('/',(req,res)=>{
     res.send(`
          <!DOCTYPE html>
@@ -53,9 +67,9 @@ app.get('/',(req,res)=>{
                         <a href="/login">login</a>
                     </body>
                 </html>`)
-})
+});
 
-app.get('/login',authenticated,passport.authenticate('github',{ scope: ['user:email'], prompt: 'consent' }));
+app.get('/login',notauthenticated,passport.authenticate('github',{ scope: ['user:email'], prompt: 'consent' }));
 
 app.get('/auth/github/callback',passport.authenticate('github'),(req,res)=>{
         res.send(`
@@ -72,17 +86,64 @@ app.get('/auth/github/callback',passport.authenticate('github'),(req,res)=>{
                     </body>
                 </html>`
                 );
-})
+});
 
-app.get('/logout',async(req, res) => {
+app.get('/logout',(req, res) => {
         req.logout((e)=>{
             if(e){
                 console.log(e);
             }
-            req.
+            console.log(req);
             res.redirect('/');
         });
-        await req.session.destroy((e)=>res.redirect('/'));
-  });
+});
+
+
+app.get('/chats',authenticated,(req,res)=>{
+
+    const httpServer = createServer(app);
+    const io = new Server(httpServer, {});
+    
+    io.on("connection", (socket) => {
+        console.log("user connected");
+    });
+    
+    httpServer.listen(8000);
+    res.send("hi");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(8000);
