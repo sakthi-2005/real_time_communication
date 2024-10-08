@@ -33,11 +33,11 @@ passport.use(new githubstatergy({
 }));
 
 let authenticated = (req,res,next)=>{
-    if(req.isAuthenticated()){
-        console.log(req.user);
+    console.log(req.user,"hi");
+    if(!req.isAuthenticated()){
         next();
     }else{
-    res.redirect('/');
+    res.redirect('/auth/github/callback');
     }
 }
 app.get('/',(req,res)=>{
@@ -56,7 +56,7 @@ app.get('/',(req,res)=>{
                 </html>`)
 })
 
-app.get('/login',passport.authenticate('github',{ scope: ['user:email'], prompt: 'consent' }));
+app.get('/login',authenticated,passport.authenticate('github',{ scope: ['user:email'], prompt: 'consent' }));
 
 app.get('/auth/github/callback',passport.authenticate('github'),(req,res)=>{
         res.send(`
