@@ -74,7 +74,7 @@ app.get('/auth/github/callback',passport.authenticate('github'),(req,res)=>{
                 );
 })
 
-app.get('/logout',async(req, res) => {
+app.get('/logout',(req, res) => {
         req.logout((e)=>{
             if(e){
                 console.log(e);
@@ -82,7 +82,6 @@ app.get('/logout',async(req, res) => {
             req.
             res.redirect('/');
         });
-        await req.session.destroy((e)=>res.redirect('/'));
   });
 
 app.listen(8000);
