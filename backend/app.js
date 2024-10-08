@@ -28,16 +28,15 @@ passport.use(new githubstatergy({
     callbackURL : 'https://convo-space-f4ed.onrender.com/auth/github/callback'
 },
 (refreshtoken,acesstoken,profile,done)=>{
-    console.log(profile);
     return done(null,profile);
 }));
 
 let authenticated = (req,res,next)=>{
-    console.log(req.user,"hi");
+    
     if(!req.isAuthenticated()){
         next();
     }else{
-    res.redirect('/auth/github/callback');
+        res.redirect('/auth/github/callback');
     }
 }
 app.get('/',(req,res)=>{
@@ -75,14 +74,15 @@ app.get('/auth/github/callback',passport.authenticate('github'),(req,res)=>{
                 );
 })
 
-app.get('/logout',(req, res) => {
+app.get('/logout',async(req, res) => {
         req.logout((e)=>{
             if(e){
                 console.log(e);
             }
+            req.
             res.redirect('/');
         });
-        // await req.session.destroy((e)=>res.redirect('/'));
+        await req.session.destroy((e)=>res.redirect('/'));
   });
 
 app.listen(8000);
