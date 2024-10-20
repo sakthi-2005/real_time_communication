@@ -1,0 +1,83 @@
+*{
+    
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  background-color: rgb(41, 40, 40);
+}
+.body{
+    display: flex;
+}
+.container{
+    background-color:  rgba(75, 75, 75, 0.4);
+    width: 60vb;
+    height: 45vh;
+    margin-top: 11em;
+    margin-left: 30em;
+    border-radius: 10px;
+    border: 1px solid rgb(87, 86, 86);
+    position: relative;
+
+}
+
+.container .mpn{
+    background-color: rgb(87, 86, 86, 0.0);
+    position: relative;
+    top: 60px;
+    text-transform: capitalize;
+    font-size: 15px;
+    
+}
+.container .inp1{
+    margin-top: 80px;
+    border-radius: 5px;
+    outline: none;
+    border: 1 px solid rgb(67, 67, 67);
+    width: 190px;
+    height: 30px;
+  
+}
+.inp1:valid{
+    border-color: rgb(168, 189, 136,0.3);
+}
+.inp1:invalid{
+    border-color: rgb(226, 95, 95,0.3);
+}
+.login{
+    border: 1px solid rgb(55, 55, 55);
+    margin-top: 30px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+p{
+    background-color: rgb(87, 86, 86, 0.0);
+    font-size: 20px;
+}
+ .google{
+    background-color: rgb(98, 96, 96,0);
+    margin:20px;
+    color: rgb(29, 28, 28);
+    font-size: 29px;
+   
+ }
+ .github{
+    background-color: rgb(98, 96, 96,0);
+    margin: 20px;
+    color: rgb(29, 28, 28);
+    font-size: 30px;
+ }
+
+ .google i{
+    background-color: rgb(98, 96, 96,0);
+    
+ }
+ .github i{
+    background-color: rgb(98, 96, 96,0);
+ }
