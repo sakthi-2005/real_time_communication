@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>whatsapp</title>
+    <title>ConvoSpace login</title>
 </head>
 <body>
-    
+
+    <img class="logoback" src="./logo.png" alt="">
     <div class="container">
-      <label class="mpn">mobile phone number</label><br>
-      <input class="inp1" type="tel" maxlength="10" minlength="10" required >
-      <br><button class="login" href="www.google.com">log in</button>
+       <form>
+        <!-- <input class="inp1" type="tel" placeholder="Enter Your Mobile Number" maxlength="10" minlength="10" required >
+        <button class="login">Get otp</button>  
+         -->
+        <input class="otpinp" required maxlength="4" minlength="4" placeholder="!!enter your otp!!" type="tel">
+        <button class="otpbut">login</button>
+        <div class="time">
+            <div class="timecount">time count:33</div>
+            <a class="resendotp" href="./login.html">resend otp</a>
+        </div> 
+      
+    </form>
       <p>or</p>
-        <a class="google" href=""><i class="fa-brands fa-google"></i></a>
-        <a class="github" href=""><i class="fa-brands fa-github"></i></a>
+        <a class="google" href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=ARpgrqd1i_3JTqV79PXiEB2H7EuY0zFA-njylp-mVER49R199W6W-TAFeVAMvC3UrzugAnqaJqE-9w&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1544049937%3A1729484382367779&ddm=0"><i class="fa-brands fa-google"></i></a>
+        <a class="github" href="https://github.com/"><i class="fa-brands fa-github"></i></a>
       
     </div>
     
