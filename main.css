@@ -9,16 +9,17 @@ display: flex;
 }
  
 .box1{
-  flex:0 0 20em ;
+  flex:0 0 15em ;
   padding: 20px;
+  height: 50em;
 }
 
 .box2{
-  flex:0 0 75em;
-  padding: 20px;
-  background-color: aliceblue;
-  border-radius: 40px 0px 0px 40px;
-  display: flex;
+  flex:0 0 80em;
+  padding:20px;
+  background-color:aliceblue;
+  border-radius:40px 0px 0px 40px;
+  display:flex;
 }
 .box3{
   flex: 0 0 25em;
@@ -27,21 +28,22 @@ display: flex;
 .box4{
   flex: 0 0 45em;
   padding: 20px;
-  flex-wrap:wrap;
-}
 
+}
 .profile{
   width: 25%;
   margin-top: 15%;
   margin-left: 35%;
+  position:fixed;
+  top: 5%;
+  left: 5%;
+  opacity: .3;
+  z-index: 1;
 }
-.profilename{
-  color: aliceblue;
-  margin-left:35%;
-  margin-top: 3%;
-}
+
 .navbars{
-  margin: 162px 10px 30px 10px;
+  margin: 13em 2em 3em 1em;
+  position: fixed;
 }
 .navbars li{
   list-style-type: none;
@@ -56,4 +58,179 @@ display: flex;
 
 .navbars li a i{
   padding: 10px;
+}
+
+.chosenitem{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color:  rgb(15, 43, 66);
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight:400;
+}
+
+#chosenitem{
+  margin-bottom: 2em;
+}
+
+.search-container{
+  position: relative;
+}
+.searchbox{
+  border: 1px solid rgb(229, 245, 245);
+  width: 23em;
+  height: 4em;
+  border-radius: 1em;
+  margin-left: 2em;
+}
+.searchbox::placeholder{
+  font-size: 1.5em;
+  color:  rgb(15, 43, 66);
+  padding: 15px;
+}
+.searchbox:focus{
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(15, 43, 66) ;
+  padding-left: 2em;
+  font-size: 15px;
+  
+
+}
+.searchbox:focus::placeholder{
+  display: block;
+  opacity: 0;
+}
+.search-icon{
+  position: absolute;
+  left: 38em;
+  top:8.6em;
+  cursor:none;
+  
+}
+.cont1{
+  width: 22em;
+  height: 5em;
+  background-color: rgb(183, 237, 189);
+  border-radius: 1em;
+  margin-top: 2em;
+  display: flex;
+  overflow: hidden;
+}
+.cont1pro{
+  width: 3em;
+  margin-top: .5em;
+  padding: .5em;
+}
+.cont1-about{
+  padding: 1.5em;
+
+}
+.cont1-name{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(15, 43, 66) ;
+  text-transform: capitalize;
+  font-size: 1.5em; 
+  font-weight: 400;
+}
+.cont1-data{
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color:rgb(15, 43, 66) ;
+
+}
+.selected-contact{
+  background-color: rgb(183, 237, 189);
+  border-radius: 5em;
+  padding: 10px;
+  margin: 4em 2em 1em 2em;
+  width: 40em;
+  height: 4em;
+  display: flex;
+  padding-left: 2em;
+}
+.selected-profile{
+  width: 3em;
+  padding-right: 2em;
+}
+.selected-pro-name{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(15, 43, 66) ;
+  text-transform: capitalize;
+  font-size: 1.5em; 
+  font-weight: 400;
+  padding-top: .5em;
+
+}
+
+.selected-contact-data{
+  background-color: rgb(183, 237, 189);
+  border-radius: 1em;
+  padding: 1em;
+  position: relative;
+  min-height: 33em;
+  
+}
+.message-sender{
+  position: fixed;
+  bottom: 4em;
+  right: 12em;
+  width: 37em;
+  height: 4em;
+  border-radius: 1em;
+  border: 1px;
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color:rgb(15, 43, 66) ;
+  padding-left: 3em;
+}
+.message-sender::placeholder{
+  padding-left: 2em;
+  font-size: 1.2em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(15, 43, 66) ;
+  text-transform: capitalize;
+  
+}
+.message-sender:focus{
+  outline: none;
+}
+.fa-microphone-lines{
+  font-size: 2em;
+  position: fixed;
+  bottom: 2em;
+  right: 20.5em;
+
+}
+.fa-face-smile-wink{
+  font-size: 2em;
+  position: fixed;
+  bottom: 2em;
+  right: 8.5em;
+}
+.fa-folder-open{
+  font-size: 2em;
+  position: fixed;
+  bottom: 2em;
+  right: 7em;
+}
+.fa-paper-plane{
+  font-size: 2em;
+  position: fixed;
+  bottom: 2em;
+  right: 5.5em;
 }

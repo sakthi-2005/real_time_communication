@@ -5,35 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
   <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+
+  <!-- link for font awesome -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- link for google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>lets share your memories with convospace</title>
 </head>
 <body>
    <div class="container">
      <div class="box1">
-
        <img class="profile" src="./logo.png" alt="" srcset="">
-       <p class="profilename">ConvoSpace</p>
-
        <!-- list of menu items -->
-
        <ul class="navbars">
         <li><a href=""><i class="fa-solid fa-message"></i>chat</a></li>
         <li><a href=""><i class="fa-solid fa-handshake"></i>group chat</a></li>
         <li><a href=""><i class="fa-solid fa-square-phone"></i>calls</a></li>
-        <li><a href=""><i class="fa-solid fa-ellipsis-vertical"></i>settings</a></li>
-         
+        <li><a href=""><i class="fa-solid fa-ellipsis-vertical"></i>settings</a></li>         
        </ul>
-
-
-
-      </div>
+    </div>
      <div class="box2"> 
-      <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat reiciendis iusto aliquam dolorem animi veniam temporibus quae, voluptas ratione similique ipsum? Enim recusandae commodi dolorem in sed alias officia perspiciatis maxime. Culpa neque odit facilis recusandae. Maxime quasi distinctio facilis, vel cupiditate ipsum tenetur expedita illum dicta rerum? Voluptas, quisquam esse. Obcaecati neque eveniet minima laudantium ullam facilis facere nostrum beatae odio ex, ipsa accusantium, sunt maxime? Saepe ex rem, vitae commodi et vel maiores quae fuga? Impedit sequi, itaque possimus consectetur sapiente, voluptatem maiores reiciendis exercitationem dolorem quia perspiciatis ipsa obcaecati nam? Hic cumque commodi corrupti inventore autem.</div>
-      <div class="box4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At nam totam, excepturi quo tempore amet consequuntur voluptatum error ipsam natus labore aspernatur esse a exercitationem unde veniam? Nihil tempore molestias dolore, architecto hic excepturi facere quo sit inventore repellendus ipsa eligendi quas dignissimos illum nemo officiis optio placeat voluptatibus accusamus distinctio temporibus autem obcaecati enim. Itaque sit quod at animi nulla corrupti optio vitae, eligendi repellendus rem maxime voluptate, dolore accusamus numquam soluta voluptatibus quas quis, ullam perspiciatis modi ducimus porro. In facere repellat voluptas voluptatum unde vitae nesciunt voluptates similique nisi magnam mollitia, eaque, amet excepturi dolores eum modi?</div>
-     </div>
+          <!--list of members -->
+      <div class="box3"> 
+        <!-- list of chosen nav bars -->
+        <p id="chosenitem"><a href="" class="chosenitem">chat</a></p>
+        <!-- search input -->
+      <div class="search-containner"> 
+          <input class="searchbox" type="text" placeholder="search">
+          <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+          <!-- contacts -->
+          <div class="contacts">
+            <!-- contact no 1 -->
+            <div class="cont1">
+                <img class="cont1pro" src="./logo.png" alt="" srcset="">
+                <div class="cont1-about">
+                  <h4 class="cont1-name">elsa</h4>
+                  <p  class="cont1-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ullam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, cumque nostrum ea velit in similique ipsum. Maxime at, unde, aliquam facere cum hic alias, mollitia vel reiciendis error quia porro quas ipsam. Cumque, voluptatibus asperiores, facilis temporibus voluptas pariatur delectus repellendus, reprehenderit porro odit natus dolorem libero? Aut, alias veniam?</p>
+                </div>
+            </div>
 
-   </div>
+            <!-- contact 2 -->
+              
+            <div class="cont1">
+                <img class="cont1pro" src="./logo.png" alt="" srcset="">
+                <div class="cont1-about">
+                  <h4 class="cont1-name">elsa</h4>
+                  <p  class="cont1-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ullam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, cumque nostrum ea velit in similique ipsum. Maxime at, unde, aliquam facere cum hic alias, mollitia vel reiciendis error quia porro quas ipsam. Cumque, voluptatibus asperiores, facilis temporibus voluptas pariatur delectus repellendus, reprehenderit porro odit natus dolorem libero? Aut, alias veniam?</p>
+                </div>
+            </div>
+        
+          </div>
+      </div>
+
+ 
+      <div class="box4"> 
+        <div class="selected-contact">
+            <img src="./logo.png" class="selected-profile" alt="" srcset="">
+            <h3 class="selected-pro-name">elsa</h3>
+        </div>
+        <div class="selected-contact-data"> 
+          <!-- reciever -->
+           
+
+          <!-- sender -->
+
+        <input class="message-sender" type="text" placeholder="type something...!!">
+        <span><i class="fa-solid fa-microphone-lines"></i></span>
+        <span><i class="fa-regular fa-face-smile-wink"></i></span>
+        <span><i class="fa-regular fa-folder-open"></i></span>
+        <span><i class="fa-solid fa-paper-plane"></i></span> 
+        </div>        
+      </div>
+    </div>
+
+  </div>
    
 </body>
 </html>
