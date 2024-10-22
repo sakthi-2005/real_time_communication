@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+background-color: rgb(40, 41, 41);
+display: flex;
+}
+ 
+.box1{
+  flex:0 0 20em ;
+  padding: 20px;
+}
+
+.box2{
+  flex:0 0 75em;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 40px 0px 0px 40px;
+  display: flex;
+}
+.box3{
+  flex: 0 0 25em;
+  padding: 20px;
+}
+.box4{
+  flex: 0 0 45em;
+  padding: 20px;
+  flex-wrap:wrap;
+}
+
+.profile{
+  width: 25%;
+  margin-top: 15%;
+  margin-left: 35%;
+}
+.profilename{
+  color: aliceblue;
+  margin-left:35%;
+  margin-top: 3%;
+}
+.navbars{
+  margin: 162px 10px 30px 10px;
+}
+.navbars li{
+  list-style-type: none;
+  margin:0 0 55px 0;
+}
+.navbars li a{
+  text-transform: capitalize;
+  font-size: 20px;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.navbars li a i{
+  padding: 10px;
+}
